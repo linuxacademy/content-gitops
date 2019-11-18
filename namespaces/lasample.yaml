@@ -1,1 +1,6 @@
-namespaces create
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    name: lasample
+  name: lasample
