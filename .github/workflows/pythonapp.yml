@@ -17,10 +17,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r ./python/requirements.txt
-    - name: Build Image
+    - name: Build & Push Image
       run: |
         cd ./python
-        docker image build -t hello:1.0 .
-    - name: Push Image
-      run: |
+        docker login --username=johndavidmarx --password=${{ secrets.DOCKERPW }}
+        docker image build -t johndavidmarx/gitops:hello:1.0 .
         docker push johndavidmarx/gitops:hello:1.0
