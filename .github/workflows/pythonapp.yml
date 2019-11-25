@@ -21,3 +21,6 @@ jobs:
       run: |
         cd ./python
         docker image build -t hello:1.0 .
+    - name: Push Image
+      run: |
+        docker push johndavidmarx/gitops:hello:1.0
