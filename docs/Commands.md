@@ -51,4 +51,41 @@ This is the command to cause flux to sync with the repo.
 $ fluxctl sync --k8s-fwd-ns flux
 ```
 
+This is the command to set an environment variable to tell fluxctl the namespace that flux is running in.
 
+```
+$ export FLUX_FORWARD_NAMESPACE=flux
+```
+
+This is the command to list flux workloads
+
+```
+$ fluxctl list-workloads
+```
+and...
+```
+$ fluxctl list-workloads --all-namespaces
+```
+and...
+```
+$ fluxctl -n lasample list-workloads
+```
+
+This is the command to list images running as flux workloads
+```
+$ fluxctl list-images
+```
+and... (specify namespace and deployment name, such as lasample and hello)
+```
+$ fluxctl list-images --workload lasample:deployment/hello
+```
+
+This is the command to get pods.
+```
+$ kubectl -n lasample get pods
+```
+
+This is the command to describe a specific pod such as hello-75d7f49d9b-t8bpr
+```
+$ kubectl -n lasample describe pod/hello-75d7f49d9b-t8bpr
+```
