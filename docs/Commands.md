@@ -45,3 +45,10 @@ This is the command to interogate the RSA Key created by the flux install.
 $ fluxctl identity --k8s-fwd-ns flux
 ```
 
+This is the command to cause flux to sync with the repo.
+
+```
+$ fluxctl sync --k8s-fwd-ns flux
+```
+
+
