@@ -24,4 +24,22 @@ spec:
         image: linuxacademycontent/gitops:hellov1.0
 ```
 
+The following is a sample YAML file to create a Service for the hello application.
+
+```
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service
+  namespace: lasample
+spec:
+  selector:
+    app: hello
+  ports:
+  - protocol: TCP
+    port: 8000
+    nodePort: 32321
+  type: NodePort
+```
+
 
