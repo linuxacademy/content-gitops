@@ -22,7 +22,7 @@ This is the command to create a namespace called flux.
 $ kubectl create namespace flux
 ```
 
-The following is the fluxctl install command used to deploy the flux pods to a cluster within the flux namespace.
+The following is the fluxctl install command used to deploy the flux pods to a cluster within the flux namespace. This is the example used in the "Installing with GitHub Lab".
 
 ```
 fluxctl install \
