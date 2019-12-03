@@ -1,7 +1,10 @@
 name: Python application
 
-on: [push]
-
+on:
+  push:
+    paths:
+    - 'python'
+      
 jobs:
   build:
 
