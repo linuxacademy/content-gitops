@@ -32,6 +32,20 @@ fluxctl install \
 --git-path=namespaces,workloads \
 --namespace=flux | kubectl apply -f -
 ```
+The version of this command used in the "Installing with GitLab Lab" is:
+
+```
+    $ export GLUSER=[your GitLab username]
+```    
+Then input the command to run flux:
+```
+    $ fluxctl install \
+    --git-user=${GLUSER} \
+    --git-email=${GLUSER}@gmail.com \
+    --git-url=git@gitlab.com:${GLUSER}/flux-sample \
+    --git-path=namespaces,workloads \
+    --namespace=flux | kubectl apply -f -
+```
 
 This is the command to check the status of the flux deployment.
 
