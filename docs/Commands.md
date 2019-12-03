@@ -25,7 +25,7 @@ $ kubectl create namespace flux
 The following is the fluxctl install command used to deploy the flux pods to a cluster within the flux namespace. This is the example used in the "Installing with GitHub Lab".
 
 ```
-fluxctl install \
+$ fluxctl install \
 --git-user=${GHUSER} \
 --git-email=${GHUSER}@users.noreply.github.com \
 --git-url=git@github.com:${GHUSER}/content-gitops \
@@ -35,16 +35,16 @@ fluxctl install \
 The version of this command used in the "Installing with GitLab Lab" is:
 
 ```
-    $ export GLUSER=[your GitLab username]
+$ export GLUSER=[your GitLab username]
 ```    
 Then input the command to run flux:
 ```
-    $ fluxctl install \
-    --git-user=${GLUSER} \
-    --git-email=${GLUSER}@gmail.com \
-    --git-url=git@gitlab.com:${GLUSER}/flux-sample \
-    --git-path=namespaces,workloads \
-    --namespace=flux | kubectl apply -f -
+$ fluxctl install \
+--git-user=${GLUSER} \
+--git-email=${GLUSER}@gmail.com \
+--git-url=git@gitlab.com:${GLUSER}/flux-sample \
+--git-path=namespaces,workloads \
+--namespace=flux | kubectl apply -f -
 ```
 
 This is the command to check the status of the flux deployment.
