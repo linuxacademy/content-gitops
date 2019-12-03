@@ -50,7 +50,7 @@ $ fluxctl install \
 This is the command to check the status of the flux deployment.
 
 ```
-kubectl -n flux rollout status deployment/flux
+$ kubectl -n flux rollout status deployment/flux
 ```
 
 This is the command to interogate the RSA Key created by the flux install.
