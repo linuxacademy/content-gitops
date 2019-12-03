@@ -106,3 +106,10 @@ $ kubectl -n lasample describe pod/hello-75d7f49d9b-t8bpr
 
 
 ## ADD AUTOMATE AND RELEASE COMMANDS HERE
+
+fluxctl release --workload=lamanifest:deployment/hello --update-image=linuxacademycontent/gitops:hellov1.2
+
+fluxctl automate --workload=lamanifest:deployment/hello
+
+fluxctl deautomate --workload=lasample:deployment/hello
+
