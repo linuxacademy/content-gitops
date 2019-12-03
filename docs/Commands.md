@@ -103,3 +103,6 @@ This is the command to describe a specific pod such as hello-75d7f49d9b-t8bpr
 ```
 $ kubectl -n lasample describe pod/hello-75d7f49d9b-t8bpr
 ```
+
+
+## ADD AUTOMATE AND RELEASE COMMANDS HERE
