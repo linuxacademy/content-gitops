@@ -1,5 +1,16 @@
 ### This file contains other YAML that helps the student with the lessons and labs in Linux Academy's Hands-On GitOps Course
 
+The following YAML file is used to create a namespace in the Kubernetes Cluster.
+
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    name: lasample
+  name: lasample
+```
+
 The following is a YAML file to create a deployment of the sample Python Application.
 
 ```
