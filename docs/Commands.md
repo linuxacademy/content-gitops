@@ -106,15 +106,15 @@ $ kubectl -n lasample describe pod/hello-75d7f49d9b-t8bpr
 
 The command to use fluxctl to add automation to an existing YAML file is:
 ```
-fluxctl automate --workload=lamanifest:deployment/hello
+$ fluxctl automate --workload=lamanifest:deployment/hello
 ```
 
 The command to use fluxctl to reference a particular image stored in Docker Hub is:
 ```
-fluxctl release --workload=lamanifest:deployment/hello --update-image=linuxacademycontent/gitops:hellov1.2
+$ fluxctl release --workload=lamanifest:deployment/hello --update-image=linuxacademycontent/gitops:hellov1.2
 ```
 
 The command to remove automation from an existing deployment YAML is:
 ```
-fluxctl deautomate --workload=lasample:deployment/hello
+$ fluxctl deautomate --workload=lasample:deployment/hello
 ```
