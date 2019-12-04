@@ -4,7 +4,7 @@
 
 ### Lab Scenario
 
-Your manager is interested in using Flux to synchronize a Kubernetes Cluster with Kubernetes Manifests stored in a GitHub Repo. The Development Organization has pushed several releases of an application called 'Hello' to docker hub. The team would like you to set up a reository with the YAML required to create a namespace and deploy the container image on docker hub.
+Your manager is interested in using Flux to synchronize a Kubernetes Cluster with Kubernetes Manifests stored in a GitHub Repo. The Development Organization has pushed several releases of an application called 'Hello' to docker hub. The team would like you to set up a repository with the YAML required to create a namespace and deploy the container image on docker hub.
 
 #### For your use:
 
