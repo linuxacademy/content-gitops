@@ -118,3 +118,17 @@ The command to remove automation from an existing deployment YAML is:
 ```
 $ fluxctl deautomate --workload=lasample:deployment/hello
 ```
+### Git Commands
+
+The following command is used to set the username foe the git cli to access GitHub.
+
+```
+$ git config --global user.name "Your Username"
+```
+
+The following command will set the e-mail address required.
+
+```
+$ git config --global user.email "Your Username@users.noreply.github.com"
+```
+
