@@ -118,6 +118,14 @@ The command to remove automation from an existing deployment YAML is:
 ```
 $ fluxctl deautomate --workload=lasample:deployment/hello
 ```
+
+To delete a namespace and all running pods within it:
+
+```
+$ kubectl delete namespace [namespace]
+```
+Note: This can be used to remove the flux deployment in your lab Kubernetes cluster.
+
 ### Git Commands
 
 The following command is used to set the username foe the git cli to access GitHub.
