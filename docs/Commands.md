@@ -57,6 +57,7 @@ $ fluxctl install \
 --git-path=namespaces,workloads \
 --namespace=flux | kubectl apply -f -
 ```
+> Note: In the above sample 'flux-sample' is an example repo name. You would use the actual url for the repo you wish Flux to scan.
 
 This is the command to check the status of the flux deployment.
 
