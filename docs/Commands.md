@@ -9,11 +9,17 @@ This is the command to install fluxctl on an Ubuntu server.
 
 ```
 $ sudo snap install fluxctl
-
+```
 or
-
+```
 $ sudo snap install --classic
 ```
+To check that fluxctl is installed:
+
+```
+$ fluxctl version
+```
+> Note: At the time of the publication of this course, the binaries in the snap repo were an unversioned version. You may have a different response when you take the course.
 
 This is the command to check the kubernetes cluster that is staged.
 
