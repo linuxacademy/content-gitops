@@ -5,9 +5,14 @@
 ### This document contains a number of commands that may prove useful to the student.
 
 This is the command to install fluxctl on an Ubuntu server.
+> Note: After the publication of this course, the maintainers of snap added the confinement security feature. Depending on Weavework's maintenance of the fluxctl binaries in the snap repositories, it may be necessary to add the "--classic" flag to the flux install command.
 
 ```
 $ sudo snap install fluxctl
+
+or
+
+$ sudo snap install --classic
 ```
 
 This is the command to check the kubernetes cluster that is staged.
