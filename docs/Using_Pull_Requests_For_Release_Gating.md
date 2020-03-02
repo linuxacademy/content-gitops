@@ -20,6 +20,6 @@ Good Luck!
 
 ### SPECIAL INSTRUCTIONS
 
-For the workflow that has been setup to work properly, you will need to substitute your username into the workfloa where the docker login command is done. You will also need to add a secret to your github repo for the Docker Hub password. It is suggested you add you dockerhub password as a secret named DOCKERPW in your github repo.
+For the workflow that has been setup to work properly, you will need to substitute your username into the workflow where the docker login command is done. You will also need to add a secret to your github repo for the Docker Hub password. It is suggested you add you dockerhub password as a secret named DOCKERPW in your github repo.
 
 
