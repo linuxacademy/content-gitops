@@ -4,7 +4,6 @@ on:
   push:
     paths:
     - 'python/*'
-    - 'python/**
       
 jobs:
   build:
