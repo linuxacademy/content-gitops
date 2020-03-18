@@ -1,7 +1,7 @@
 name: Python application
 
 on:
-  push:
+  pull:
     paths:
     - 'python/*'
       
@@ -24,5 +24,6 @@ jobs:
       run: |
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "[your dockerhub login here]" --password-stdin
-        docker image build -t [your dockerhub username here]/gitops:hellov1.0 .
-        docker push [your docker hub username here]/gitops:hellov1.0
+        docker login --username=cloud_user --password=${{ secrets.DOCKERPW }}
+        docker image build -t cloud_user/gitops:hellov1.2.1 .
+        docker push cloud_user/gitops:hellov1.2.1
