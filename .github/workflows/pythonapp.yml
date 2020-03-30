@@ -25,4 +25,4 @@ jobs:
         cd ./python 
         docker login --username=splak13 --password=${{ secrets.DOCKERPW }}
         docker image build -t splak13/gitops:hellov1.0 .
-        docker push [your docker hub username here]/gitops:hellov1.0
+        docker push splak13/gitops:hellov1.0
