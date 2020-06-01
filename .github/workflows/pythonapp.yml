@@ -23,7 +23,7 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        docker login --username="forquare" --password="${{ secrets.DOCKERPW }}"
+        echo "${{ secrets.DOCKERPW }}" | docker login --username="forquare" --password-stdin
         docker image build -t forquare/gitops:hellov1.0 .
         docker push forquare/gitops:hellov1.0
         
