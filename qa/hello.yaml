@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: hello
-        image: sunku/nginx:1.19.2
+        image: linuxacademycontent/gitops:hellov1.0
