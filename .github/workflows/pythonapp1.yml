@@ -1,0 +1,28 @@
+name: Python application
+
+on:
+  push:
+    paths:
+    - 'python/*'
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ./python/requirements.txt
+    - name: Build & Push Image
+      run: |
+        cd ./python
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "[your dockerhub login here]" --password-stdin
+        docker image build -t [your dockerhub username here]/gitops:hellov1.0 .
+        docker push [your docker hub username here]/gitops:hellov1.0
