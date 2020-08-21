@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  namespace: lasample
+spec:
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello
+        image: linuxacademycontent/gitops:hellov1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
