@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: linuxacademycontent/gitops:hellov1.0
+        image: athenian78/gitops:hellov1.0
         resources:
           limits:
             memory: "128Mi"
