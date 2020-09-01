@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         docker login --username=ivan1656056 --password=Dmtjootjb123
-        docker image build -t ivan1656056/gitops:hellov1.0 .
-        docker push ivan1656056/gitops:hellov1.0
+        docker image build -t ivan1656056/gitops:hellov1.2 .
+        docker push ivan1656056/gitops:hellov1.2
