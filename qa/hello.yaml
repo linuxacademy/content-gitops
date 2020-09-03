@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployments
+kind: Deployment
 metadata:
   name: hello
   namespace: lasample
