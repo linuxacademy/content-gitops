@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello Viktoriia Almeida, again second attempt!6"
+    return "Hello Viktoriia Almeida, again but now with with pull request"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000)
