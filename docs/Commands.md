@@ -12,7 +12,7 @@ $ sudo snap install fluxctl
 ```
 or
 ```
-$ sudo snap install --classic
+$ sudo snap install fluxctl --classic
 ```
 To check that fluxctl is installed:
 
