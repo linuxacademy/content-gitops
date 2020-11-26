@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         docker login --username fidelis90 --password Timetolaugh90#@
-        docker image build -t [your dockerhub username here]/gitops:hellov1.0 .
-        docker push [your docker hub username here]/gitops:hellov1.0
+        docker image build -t fidelis90/gitops:hellov1.0 .
+        docker push fidelis90/gitops:hellov1.0
