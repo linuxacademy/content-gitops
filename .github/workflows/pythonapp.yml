@@ -25,4 +25,4 @@ jobs:
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "nmbiren" --password-stdin
         docker image build -t nmbiren/gitops:hellov1.1 .
-        docker push nmbiren/gitops:hellov1.1
+        docker push nmbiren/containerimages1:hellov1.1
