@@ -1,7 +1,7 @@
 name: Python application
 
 on:
-  pull_request:
+  push:
     paths:
     - 'python/*'
       
@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         docker login --username=nmbiren --password=${{ secrets.DOCKERPW }}
-        docker image build -t nmbiren/containerimages1:hellov1.4 .
-        docker push nmbiren/containerimages1:hellov1.4
+        docker image build -t nmbiren/containerimages1:hellov1.5 .
+        docker push nmbiren/containerimages1:hellov1.5
