@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "sitaryazdani" --password "pooria1121"
-        docker image build -t [your dockerhub username here]/gitops:hellov1.2 .
+        docker image build -t sitaryazdani/gitops:hellov1.2 .
         docker push sitaryazdani/gitops:hellov1.2
