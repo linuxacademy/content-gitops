@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: hello
-        image: linuxacademycontent/gitops:hellov1.2
+        image: muripic/playground:hellov1.0
