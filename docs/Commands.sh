@@ -44,6 +44,23 @@ fluxctl install \
 --git-path=namespaces,workloads \
 --namespace=flux | kubectl apply -f -
 
+
+fluxctl install \
+--git-user=${GHUSER} \
+--git-email=${GHUSER}@users.noreply.github.com \
+--git-url=git@github.com:${GHUSER}/content-gitops \
+--git-path=namespaces,qa \
+--namespace=flux | kubectl apply -f -
+
+
+fluxctl install \
+--git-user=${GHUSER} \
+--git-email=${GHUSER}@users.noreply.github.com \
+--git-url=git@github.com:${GHUSER}/content-gitops \
+--git-path=namespaces,production \
+--namespace=flux | kubectl apply -f -
+
+
 # https://github.com/josefloressv/manifest_with_flux
 fluxctl install \
 --git-user=${GHUSER} \
@@ -84,8 +101,9 @@ fluxctl sync
 # List flux workloads
 fluxctl list-workloads
 fluxctl list-workloads --all-namespaces
-fluxctl -n lamanifestjf list-workloads
 kubectl get pods --all-namespaces
+
+fluxctl -n lamanifestjf list-workloads
 
 # list images running as flux workloads
 fluxctl list-images
@@ -93,6 +111,7 @@ fluxctl -n lamanifestjf list-images
 
 #and... (specify namespace and deployment name, such as lamanifestjf and hello)
 fluxctl list-images --workload lamanifestjf:deployment/hello
+fluxctl list-images --workload lasample:deployment/hello
 
 # Get pods.
 kubectl -n lamanifestjf get pods
@@ -114,7 +133,9 @@ kubectl get pods -n lamanifestjf
 fluxctl deautomate --workload=lamanifestjf:deployment/hello
 
 #To delete a namespace and all running pods within it:
-kubectl delete namespace [namespace]
+kubectl delete namespace flux
+kubectl delete namespace lasample
+kubectl delete namespace lamanifestjf
 #Note: This can be used to remove the flux deployment in your lab Kubernetes cluster.
 
 ### Git Commands
