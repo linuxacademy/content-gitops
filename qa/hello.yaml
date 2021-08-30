@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: hello
-        image: saadaq/gitops:hellov1.0
+        image: saadaq/gitops:hellov1.2
