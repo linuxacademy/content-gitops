@@ -22,7 +22,7 @@ jobs:
         pip install -r ./python/requirements.txt
     - name: Build & Push Image
       run: |
-         cd ./python
+        cd ./python
         docker login --username=mha1234 --password=${{ secrets.DOCKERPW }}
         docker image build -t mha1234/gitops:hellov1.0 .
         docker push mha1234/gitops:hellov1.0
