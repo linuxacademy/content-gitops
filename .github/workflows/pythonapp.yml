@@ -20,9 +20,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r ./python/requirements.txt
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.leenacloud2021 }} --password-stdin
     - name: Build & Push Image
       run: |
         cd ./python
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "leenacloud2021" --password-stdin
         docker image build -t leenacloud2021/gitops:hellov1.0 .
         docker push leenacloud2021/gitops:hellov1.0
