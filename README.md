@@ -4,3 +4,4 @@
 ### Hands-On GitOps
 
 This repository is a resource provided for Linux Academy students taking the hands-on GitIOps course.
+Be sure to have ssh key set up and that your public key store in github
