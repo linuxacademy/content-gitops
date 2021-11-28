@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: lasample
+  namespace: nginx-namespace
   labels:
     app: nginx
 spec:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.7.9
+        image: nginx:latest
         ports:
         - containerPort: 80
