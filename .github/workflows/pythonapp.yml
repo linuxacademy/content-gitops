@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         echo "$MY_PASSWORD" | docker login -u "evan21" --password-stdin
-        docker image build -t evan21/gitops:hellov1.0 .
+        docker image build -t evan21/gitops:hellov1.1 .
         docker push evan21/gitops:hellov1.0
