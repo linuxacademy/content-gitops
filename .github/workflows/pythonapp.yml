@@ -26,3 +26,4 @@ jobs:
         echo "${{ secrets.DOCKERPW }}" | docker login -u "thisisaf" --password-stdin
         docker image build -t thisisaf/gitops:hellov1.2 .
         docker push thisisaf/gitops:hellov1.2
+        
