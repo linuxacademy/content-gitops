@@ -25,4 +25,4 @@ jobs:
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "gzxl4r" --password-stdin
         docker image build -t gzxl4r/gitops:latest .
-        docker push gzxl4r/gitops:lateset
+        docker push gzxl4r/gitops:latest
