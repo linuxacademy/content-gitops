@@ -4,3 +4,6 @@
 ### Hands-On GitOps
 
 This repository is a resource provided for Linux Academy students taking the hands-on GitIOps course.
+Making some change to readme file to include the details of SSH keys
+
+Making another change to pull to local repo
