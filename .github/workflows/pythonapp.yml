@@ -23,6 +23,6 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        echo "${{ DOCKERPW.DOCKERPW }}" | docker login -u "dtcxiang" --password-stdin
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "dtcxiang" --password-stdin
         docker image build -t dtcxiang/flux-tryout:1.0.0 .
         docker push dtcxiang/flux-tryout:1.0.0
