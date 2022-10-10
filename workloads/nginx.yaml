@@ -1,19 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
-  namespace: lasample
+  name: nginx-deployment
+  namespace: laflux
   labels:
-    app: hello
+    app: nginx
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: hello
+      app: nginx
   template:
     metadata:
       labels:
-        app: hello
+        app: nginx
     spec:
       containers:
-      - name: hello
-        image: nilofe/gitops:hellov1.2
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
