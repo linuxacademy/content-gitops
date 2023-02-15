@@ -3,5 +3,5 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: helloworld
 spec:
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 2
