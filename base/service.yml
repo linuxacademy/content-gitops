@@ -8,4 +8,4 @@ spec:
   - port: 80
   selector:
     app: helloworld
-  type: NodePort
+  type: LoadBalancer
