@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: nginx:1.7.9
+        image: nginx:1.2
         imagePullPolicy: Always
         ports:
         - name: web
