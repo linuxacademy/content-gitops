@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: nginx:1.2
+        image: manojkumarkudla/gitops:hellov1.3
         imagePullPolicy: Always
         ports:
         - name: web
