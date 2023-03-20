@@ -25,4 +25,4 @@ jobs:
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "mohdwazid" --password-stdin
         docker image build -t mohdwazid/gitops:hellov3.0 .
-        docker push mohdwazid/gitops:hellov130
+        docker push mohdwazid/gitops:hellov30
