@@ -1,7 +1,7 @@
 name: Python application
 
 on:
-  push:
+  pull_request:
     paths:
     - 'python/*'
       
@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "mohdwazid" --password-stdin
-        docker image build -t mohdwazid/gitops:hellov1.0 .
-        docker push mohdwazid/gitops:hellov1.0
+        docker image build -t mohdwazid/gitops:hellov3.0 .
+        docker push mohdwazid/gitops:hellov130
