@@ -4,13 +4,3 @@ metadata:
   labels:
     name: lasample
   name: lasample
----
-apiVersion: v1
-kind: Namespace
-metadata:
-    name: preprod
----
-apiVersion: v1
-kind: Namespace
-metadata:
-    name: prod
