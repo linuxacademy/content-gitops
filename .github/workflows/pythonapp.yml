@@ -25,4 +25,4 @@ jobs:
         cd ./python
         docker login --username=rheacisa --password=${{ secrets.DOCKERPW }}
         docker image build -t rheacisa/gitops:hellov1.0 .
-        docker push cloud_user/gitops:hellov1.0
+        docker push rheacisa/gitops:hellov1.0
