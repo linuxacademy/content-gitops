@@ -23,6 +23,6 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        echo "${{ secrets.FowDV74e6@VAqUiQ }}" | docker login -u "zakig7" --password-stdin
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "zakig7" --password-stdin
         docker image build -t zakig7/demos:hellov1.2 .
         docker push zakig7/demos:hellov1.2
