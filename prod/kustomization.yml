@@ -3,6 +3,6 @@ kind: Kustomization
 bases:
 - ../base/
 namespace: prod
-namePrefix: prod-
+#namePrefix: prod-
 patchesStrategicMerge:
 - replicas-patch.yml
