@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: helloworld
+  name: hello
 spec:
   minReplicas: 1
   maxReplicas: 2
