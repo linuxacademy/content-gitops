@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
+  name: hello-lb
 spec:
   ports:
   - port: 80
