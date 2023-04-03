@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello
-  namespace: lasample
+  namespace: prod
   labels:
     app: hello
 spec:
