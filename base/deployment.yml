@@ -1,23 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: hello
+  namespace: lasample
   labels:
-    app: helloworld
+    app: hello
 spec:
-  revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: helloworld
+      app: hello
   template:
     metadata:
       labels:
-        app: helloworld
+        app: hello
     spec:
       containers:
-      - name: helloworld
-        image: manojkumarkudla/gitops:hellov1.3
-        imagePullPolicy: Always
-        ports:
-        - name: web
-          containerPort: 80
+      - name: hello
+        image: manojkumarkudla/gitops:hellov1.2
