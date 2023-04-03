@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: helloworld
+  name: hello
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: helloworld
+    name: hello
   minReplicas: 1
   maxReplicas: 2
   metrics:
