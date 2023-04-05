@@ -1,0 +1,12 @@
+git:
+  pollInterval: 1m
+  url: git@github.com:manojkumarkudla/content-gitops.git
+  branch: master
+  path: preprod
+syncGarbageCollection:
+  enabled: true
+manifestGeneration: true
+additionalArgs:
+  -  --git-sync-tag=flux-sync-preprod
+allowedNamespaces:
+  - preprod

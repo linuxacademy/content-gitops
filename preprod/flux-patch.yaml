@@ -1,0 +1,17 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.helloworld: semver:~1
+  name: preprod-helloworld
+  namespace: preprod
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: helloworld
+      containers:
+      - image: particule/helloworld:1.1
+        name: helloworld
