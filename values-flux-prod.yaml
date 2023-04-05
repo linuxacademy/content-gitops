@@ -1,0 +1,8 @@
+git:
+  pollInterval: 1m
+  url: git@github.com:manojkumarkudla/content-gitops.git
+  branch: master
+  path: prod
+syncGarbageCollection:
+  enabled: true
+manifestGeneration: true
