@@ -1,0 +1,5 @@
+version: 1
+patchUpdated:
+  generators:
+    - command: kubectl kustomize .
+  patchFile: flux-patch.yaml
