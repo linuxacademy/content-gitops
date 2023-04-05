@@ -1,19 +1,24 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app
-  namespace: prod
+  name: helloworld
   labels:
-    app: hello
+    app: helloworld
 spec:
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: hello
+      app: helloworld
   template:
     metadata:
       labels:
-        app: hello
+        app: helloworld
     spec:
       containers:
-      - name: hello
-        image: manojkumarkudla/gitops:hellov1.2
+      - name: helloworld
+        image: particule/helloworld
+        imagePullPolicy: Always
+        ports:
+        - name: web
+          containerPort: 80
