@@ -24,5 +24,5 @@ jobs:
       run: |
         cd ./python
         docker login -u "kompromatas" --password=${{ secrets.DOCKERPW }}
-        docker image build -t [your dockerhub username here]/gitops:hellov1.2 .
-        docker push [your docker hub username here]/gitops:hellov1.2
+        docker image build -t kompromatas/gitops:hellov1.2 .
+        docker push kompromatas/gitops:hellov1.2
