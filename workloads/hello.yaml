@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: hello
-        image: jmtorma/content-gitops:hellov1.0
+        image: jmtorma/gitops:hellov1.0
