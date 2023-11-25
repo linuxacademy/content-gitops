@@ -23,6 +23,6 @@ jobs:
     - name: Build & Push Image
       run: |
         cd ./python
-        docker login --username=mgonter --password=${{ secrets.DOCKERPW }}
+        echo ${{ secrets.DOCKERPW }} | docker login -u mgonter --password-stdin
         docker image build -t mgonter/training:hellov1.1 .
         docker push mgonter/training:hellov1.1
