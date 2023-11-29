@@ -4,6 +4,9 @@ on:
   push:
     paths:
     - 'python/*'
+  pull:
+    paths:
+    - 'python/*'
       
 jobs:
   build:
