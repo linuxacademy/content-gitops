@@ -4,7 +4,7 @@ on:
   push:
     paths:
     - 'python/*'
-  pull:
+  pull_request:
     paths:
     - 'python/*'
       
