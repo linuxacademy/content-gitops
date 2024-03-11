@@ -1,10 +1,10 @@
-name: Python application
+name: Python application [PR]
 
 on:
-  push:
+  pull_request:
     paths:
     - 'python/*'
-    - '.github/workflows/pythonapp.yml'
+    - '.github/workflows/pythonapp-pr.yml'
       
 jobs:
   build:
@@ -21,9 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r ./python/requirements.txt
-    - name: Build & Push Image
+    - name: Build the Docker image
       run: |
         cd ./python
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "konstantinzaigraev" --password-stdin
         docker image build -t konstantinzaigraev/flux-education:hellov1.0 .
-        docker push konstantinzaigraev/flux-education:hellov1.0
