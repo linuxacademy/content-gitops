@@ -25,4 +25,4 @@ jobs:
         cd ./python
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "konstantinzaigraev" --password-stdin
         docker image build -t konstantinzaigraev/flux-education:hellov1.0 .
-        docker push [your docker hub username here]/flux-education:hellov1.0
+        docker push konstantinzaigraev/flux-education:hellov1.0
