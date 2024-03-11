@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.7.9
+        image: public.ecr.aws/nginx/nginx:1.25-bookworm
         ports:
         - containerPort: 80
