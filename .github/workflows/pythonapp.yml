@@ -1,7 +1,9 @@
 name: Python application
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+    - 'python/*'
       
 jobs:
   build:
